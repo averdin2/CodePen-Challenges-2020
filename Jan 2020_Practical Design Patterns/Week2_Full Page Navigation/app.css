@@ -1,0 +1,10 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+svg {
+  width: 10vw;
+  padding: 14px;
+  cursor: pointer;
+}
