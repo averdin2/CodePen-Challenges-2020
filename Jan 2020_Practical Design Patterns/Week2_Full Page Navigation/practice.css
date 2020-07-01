@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  height: 20vh;
+  background-color: dodgerblue;
+}
+
+.burger-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.burger-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.burger-wrap .burger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1.5px solid white;
+}
+
+/* Middle burger line */
+.burger-wrap .burger-menu > div {
+  position: relative;
+  width: 70%;
+  height: 2px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+/* Creates two top and bottom lines */
+.burger-wrap .burger-menu > div:before,
+.burger-wrap .burger-menu > div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Places top and bottom lines */
+.burger-wrap .burger-menu > div:before {
+  top: -10px;
+  transition: all 0.4s ease;
+}
+
+.burger-wrap .burger-menu > div:after {
+  top: 10px;
+  transition: all 0.4s ease;
+}
+
+/* Animate toggle */
+.burger-wrap .toggler:checked + .burger-menu > div {
+  transform: rotate(45deg);
+}
+
+.burger-wrap .toggler:checked + .burger-menu > div:before,
+.burger-wrap .toggler:checked + .burger-menu > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Line Menu css */
+.line-menu-wrap {
+  position: fixed;
+  top: 20vh;
+  left: 0;
+  z-index: 1;
+}
+
+.line-menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+}
+
+.line-menu-wrap .line-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1.5px solid black;
+}
+
+.line-menu-wrap .line-menu .line2,
+.line-menu-wrap .line-menu .line1,
+.line-menu-wrap .line-menu .line3 {
+  position: relative;
+  margin: 5px 0;
+  width: 70%;
+  height: 2px;
+  background-color: black;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  transition: all 0.4s ease;
+}
+
+/* Animate toggle */
+.line-menu-wrap .toggler:checked + .line-menu .line1 {
+  margin: 0;
+  transform: rotate(135deg);
+}
+
+.line-menu-wrap .toggler:checked + .line-menu .line2 {
+  /* transform: rotate(45deg); */
+  opacity: 0;
+  margin: 0;
+}
+
+.line-menu-wrap .toggler:checked + .line-menu .line3 {
+  margin: 0;
+  transform: rotate(-135deg);
+}
+
+/* Line Menu 2 CSS */
+.line-menu-wrap2 {
+  position: fixed;
+  top: 40vh;
+  left: 0;
+  z-index: 1;
+}
+
+.line-menu-wrap2 .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+}
+
+.line-menu-wrap2 .line-menu2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  border: 1.5px solid black;
+}
+
+.line-menu-wrap2 .line-menu2 .line1,
+.line-menu-wrap2 .line-menu2 .line2,
+.line-menu-wrap2 .line-menu2 .line3 {
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background-color: black;
+  transition: top 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: 0.5s, 0.5s, 0s;
+  /* transition: top 1s ease; */
+}
+
+/* Place Line Menu 2 Lines */
+.line-menu-wrap2 .line-menu2 .line1 {
+  top: 25%;
+}
+
+.line-menu-wrap2 .line-menu2 .line2 {
+  top: 45%;
+}
+
+.line-menu-wrap2 .line-menu2 .line3 {
+  top: 65%;
+}
+
+/* Animate Line Menu 2 toggle */
+.line-menu-wrap2 .toggler:checked + .line-menu2 .line1 {
+  transform: rotate(45deg);
+  transition-delay: 0s, 0s, 0.5s;
+  top: 45%;
+}
+
+.line-menu-wrap2 .toggler:checked + .line-menu2 .line2 {
+  /* transform: rotate(45deg); */
+  transition-delay: 0s, 0s, 0.5s;
+  opacity: 0;
+}
+
+.line-menu-wrap2 .toggler:checked + .line-menu2 .line3 {
+  transform: rotate(-45deg);
+  transition-delay: 0s, 0s, 0.5s;
+  top: 45%;
+}

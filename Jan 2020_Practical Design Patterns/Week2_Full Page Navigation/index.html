@@ -4,22 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="app.css" />
-    <title>Document</title>
+    <title>Full Page Navigation</title>
   </head>
   <body>
-    <svg viewBox="0 0 100 80">
-      <rect width="100" height="10"></rect>
-      <rect y="25" width="100" height="10"></rect>
-      <rect y="50" width="100" height="10"></rect>
-    </svg>
-
     <nav>
-      <ul>
-        <li><a href="#0">Home</a></li>
-        <li><a href="#0">About</a></li>
-        <li><a href="#0">Contact</a></li>
-        <li><a href="#0">Dance</a></li>
-      </ul>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" />
+        <div class="menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <div class="menu-items">
+          <div>
+            <div>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Dance</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   </body>
 </html>
